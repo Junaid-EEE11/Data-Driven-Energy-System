@@ -1,0 +1,39 @@
+mlp:
+  hidden_dims: [256, 256, 128]
+  activation: "relu"
+  dropout: 0.1
+  lr: 0.001
+  weight_decay: 1.0e-5
+  batch_size: 64
+  epochs: 100
+  early_stopping_patience: 15
+
+tree:
+  max_iter: 150
+  learning_rate: 0.05
+  max_depth: 8
+  min_samples_leaf: 20
+
+gnn:
+  type: "GraphSageGNN"
+  node_in_dim: 6  # [p_meas, q_meas, v_meas, mask_p, mask_q, mask_v]
+  edge_in_dim: 4  # [r_series, x_series, b_shunt, length_scale]
+  hidden_dim: 128
+  num_layers: 4
+  heads: 4
+  dropout: 0.05
+  residual: true
+  lr: 0.001
+  weight_decay: 1.0e-5
+  batch_size: 32
+  epochs: 100
+  early_stopping_patience: 15
+
+physics:
+  lambda_physics: 0.1
+  physics_loss_type: "admittance_residual"  # "admittance_residual" or "branch_flow"
+  v_base_kv: 2.401777
+
+uncertainty:
+  method: "split_conformal"
+  nominal_coverage_levels: [0.90, 0.95]

@@ -1,0 +1,43 @@
+feeder:
+  name: "ieee123"
+  master_file: "feeder_models/ieee123/IEEE123Master.dss"
+  base_kv_ll: 4.16
+  base_mva: 5.0
+  slack_bus: "150"
+  slack_kv_ln: 2.401777
+
+simulation:
+  n_samples_train: 1200
+  n_samples_val: 300
+  n_samples_cal: 300
+  n_samples_test: 400
+  n_samples_ood_high: 250
+  n_samples_ood_low: 250
+  n_samples_ood_solar: 250
+
+  load_multiplier:
+    normal:
+      min: 0.6
+      max: 1.4
+      mean: 1.0
+      std: 0.15
+    ood_high:
+      min: 1.45
+      max: 1.95
+      mean: 1.70
+      std: 0.10
+    ood_low:
+      min: 0.20
+      max: 0.55
+      mean: 0.38
+      std: 0.08
+
+  power_factor_range: [0.88, 0.98]
+  der_penetration_normal: 0.0
+  der_penetration_solar_ood: 0.45
+
+splits:
+  train_ratio: 0.545
+  val_ratio: 0.136
+  cal_ratio: 0.136
+  test_ratio: 0.183

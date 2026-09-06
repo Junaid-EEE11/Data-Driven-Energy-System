@@ -1,0 +1,51 @@
+experiments:
+  exp_a_normal:
+    description: "Standard normal measurement setup"
+    measurement_availability: 0.40
+    noise_v_std: 0.005  # 0.5% std
+    noise_pq_std: 0.02  # 2.0% std
+    missing_rate: 0.0
+    bad_data_rate: 0.0
+
+  exp_b_sparsity:
+    description: "Sensor availability sweep"
+    availability_levels: [0.10, 0.20, 0.40, 0.60, 0.80, 1.00]
+    default_noise_v: 0.005
+    default_noise_pq: 0.02
+
+  exp_c_noise:
+    description: "Increasing measurement noise levels"
+    noise_multipliers: [0.5, 1.0, 2.0, 3.0, 5.0]
+    base_v_std: 0.005
+    base_pq_std: 0.02
+    availability: 0.40
+
+  exp_d_missingness:
+    description: "Random sensor dropout rates"
+    missing_rates: [0.10, 0.20, 0.40, 0.60]
+    availability: 0.60
+
+  exp_e_structured_missingness:
+    description: "Burst / localized communication failures (substation zones)"
+    dropped_zone_depths: [1, 2, 3]
+    availability: 0.60
+
+  exp_f_bad_data:
+    description: "Gross errors / bad data corruption rates"
+    bad_data_fractions: [0.01, 0.02, 0.05, 0.10]
+    corruption_magnitude: 0.25  # +/- 25% or additive spike
+    availability: 0.40
+
+  exp_g_ood:
+    description: "Operating-condition distribution shift"
+    scenarios: ["ood_high_loading", "ood_low_loading", "ood_high_solar_der"]
+    availability: 0.40
+
+  exp_h_calibration:
+    description: "Conformal uncertainty calibration assessment"
+    nominal_levels: [0.80, 0.85, 0.90, 0.95, 0.99]
+    eval_on_ood: true
+
+  exp_i_computation:
+    description: "Solve and inference execution time profiling"
+    n_benchmark_runs: 100

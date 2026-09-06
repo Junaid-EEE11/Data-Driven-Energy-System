@@ -1,0 +1,16 @@
+project_name: "dsse-physics-conformal"
+random_seed: 42
+seeds: [42, 123, 456, 789, 1011]
+log_level: "INFO"
+device: "cpu"
+
+paths:
+  feeder_dir: "feeder_models/ieee123"
+  data_raw: "data/raw"
+  data_interim: "data/interim"
+  data_processed: "data/processed"
+  data_splits: "data/splits"
+  results_raw: "results/raw"
+  results_aggregated: "results/aggregated"
+  results_tables: "results/tables"
+  results_figures: "results/figures"

@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=65.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dsse-physics-conformal"
+version = "0.1.0"
+description = "Physics-Aware and Uncertainty-Calibrated Distribution System State Estimation Under Sparse, Missing, and Corrupted Smart-Meter Measurements"
+readme = "README.md"
+authors = [{ name = "Research Team", email = "research@example.org" }]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "opendssdirect.py>=0.9.4",
+    "dss-python>=0.15.7",
+    "torch>=2.0.0",
+    "numpy>=1.24.0",
+    "scipy>=1.10.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.2.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "networkx>=3.0",
+    "pyyaml>=6.0",
+    "tqdm>=4.65.0",
+    "pytest>=7.3.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

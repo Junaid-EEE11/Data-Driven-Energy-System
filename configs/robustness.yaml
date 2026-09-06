@@ -1,0 +1,13 @@
+robustness:
+  stress_scenarios:
+    combined_severe:
+      availability: 0.20
+      noise_multiplier: 3.0
+      missing_rate: 0.30
+      bad_data_rate: 0.05
+    ood_with_bad_data:
+      ood_scenario: "ood_high_loading"
+      availability: 0.30
+      bad_data_rate: 0.05
+  bootstrap_resamples: 1000
+  bootstrap_ci: 0.95

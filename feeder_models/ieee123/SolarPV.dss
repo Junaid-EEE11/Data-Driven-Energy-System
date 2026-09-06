@@ -1,0 +1,9 @@
+! Solar PV / DER additions for OOD generation scenarios on IEEE 123-node feeder
+! Added at distributed representative single-phase and 3-phase buses
+New Generator.PV_bus1   Phases=3 Bus1=1.1.2.3   kV=4.16 kW=100.0 kvar=0.0 model=1
+New Generator.PV_bus18  Phases=3 Bus1=18.1.2.3  kV=4.16 kW=120.0 kvar=0.0 model=1
+New Generator.PV_bus47  Phases=3 Bus1=47.1.2.3  kV=4.16 kW=150.0 kvar=0.0 model=1
+New Generator.PV_bus76  Phases=3 Bus1=76.1.2.3  kV=4.16 kW=120.0 kvar=0.0 model=1
+New Generator.PV_bus97  Phases=3 Bus1=97.1.2.3  kV=4.16 kW=150.0 kvar=0.0 model=1
+New Generator.PV_bus108 Phases=3 Bus1=108.1.2.3 kV=4.16 kW=100.0 kvar=0.0 model=1
+New Generator.PV_bus65  Phases=3 Bus1=65.1.2.3  kV=4.16 kW=100.0 kvar=0.0 model=1

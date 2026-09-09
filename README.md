@@ -43,10 +43,6 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-## Getting Started
-
-[Add specific usage examples and quickstart guides here]
-
 ## Project Structure
 
 ```
@@ -60,10 +56,6 @@ Data-Driven-Energy-System/
 ├── requirements.txt         # Python dependencies
 └── README.md               # This file
 ```
-
-## Usage
-
-[Add specific usage examples here]
 
 ## Key Components
 
@@ -103,27 +95,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Data sources and references
 - Collaborators and contributors
 - Relevant research papers and frameworks
-
-## Contact
-
-For questions or inquiries, please open an issue on the repository or contact the maintainer directly.
-
----
-
-## Resources
-
-- [Energy System Optimization](https://en.wikipedia.org/wiki/Energy_system)
-- [Machine Learning in Energy](https://example.com)
-- [Smart Grid Technologies](https://example.com)
-
-## Roadmap
-
-- [ ] Add comprehensive documentation
-- [ ] Implement advanced ML models
-- [ ] Add real-time data integration
-- [ ] Create web dashboard
-- [ ] Expand test coverage
-
----
-
-**Last Updated**: September 2026
